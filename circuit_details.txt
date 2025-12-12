@@ -1,0 +1,5 @@
+Resistor (Ohms): 1000.000000
+Capacitor (Farads): 0.000000010
+Cutoff_frequency (HZ): 15915.494309
+High pass0
+low pass1

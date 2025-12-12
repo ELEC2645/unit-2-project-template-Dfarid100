@@ -1,9 +1,12 @@
 #ifndef FUNCS_H
 #define FUNCS_H
 
-void menu_item_1(void);
-void menu_item_2(void);
-void menu_item_3(void);
-void menu_item_4(void);
+void Select_circuit_type(void);
+void View_circuit_details(void);
+void Select_frequency_analyser(void);
+void Select_time_analyser(void);
+void Help_and_theory(void);
+
+
 
 #endif

@@ -1,4 +1,4 @@
-// ELEC2645 Unit 2 Project Template
+// ELEC2645 Unit 2 Project RC circuit analyser
 // Command Line Application Menu Handling Code
 
 #include <stdio.h>
@@ -37,7 +37,7 @@ static void main_menu(void)
 
 static int get_user_input(void)
 {
-    enum { MENU_ITEMS = 5 };   /* 1..4 = items, 5 = Exit */
+    enum { MENU_ITEMS = 6 };   /* 1..5 = items, 6 = Exit */
     char buf[128];
     int valid_input = 0;
     int value = 0;
@@ -74,21 +74,26 @@ static void select_menu_item(int input)
 {
     switch (input) {
         case 1:
-            menu_item_1();
+            Select_circuit_type();
             go_back_to_main();
             break;
         case 2:
-            menu_item_2();
+            View_circuit_details();
             go_back_to_main();
             break;
         case 3:
-            menu_item_3();
+            Select_frequency_analyser();
             go_back_to_main();
             break;
         case 4:
-            menu_item_4();
+            Select_time_analyser();
             go_back_to_main();
             break;
+         case 5:
+            Help_and_theory();
+            go_back_to_main();
+            break;
+            
         default:
             printf("Bye!\n");
             exit(0);
@@ -97,16 +102,17 @@ static void select_menu_item(int input)
 
 static void print_main_menu(void)
 {
-    printf("\n----------- Main menu -----------\n");
+    printf("\n----------- RC circuit analyser -----------\n");
     printf("\n"
            "\t\t\t\t\t\t\n"
-           "\t1. Menu item 1\t\t\n"
-           "\t2. Menu item 2\t\t\n"
-           "\t3. Menu item 3\t\t\n"
-           "\t4. Menu item 4\t\t\n"
-           "\t5. Exit\t\t\t\t\n"
+           "\t1. Select circuit type\t\t\n"
+           "\t2. View circuit details\t\t\n"
+           "\t3. Simulate frequency-domain response\t\t\n"
+           "\t4. Simulate time-domain response\t\t\n"
+           "\t5. Help and theory\t\t\n"
+           "\t6. Exit\t\t\t\t\n"
            "\t\t\t\t\t\t\n");
-    printf("---------------------------------------------\n");
+    printf("----------------------------------\n");
 }
 
 static void go_back_to_main(void)
